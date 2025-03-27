@@ -1,6 +1,7 @@
+// frontend/src/components/Auth/Signup.js
 import React, { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import app from "../../firebase/firebaseConfig"; // Adjust the path as needed
+import app from "../../firebase/firebaseConfig";
 
 const auth = getAuth(app);
 

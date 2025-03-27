@@ -1,18 +1,21 @@
+// frontend/src/App.js
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Login from "./components/Auth/Login"; // Import the Login component
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./components/Auth/Login";
+import Signup from "./components/Auth/Signup";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to Delivery Services</h1>
-        <Login /> {/* Add the Login component here */}
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>Delivery Services Authentication</h1>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
-export default App;
+export default App;

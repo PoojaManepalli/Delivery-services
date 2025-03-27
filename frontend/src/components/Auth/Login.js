@@ -1,6 +1,7 @@
+// frontend/src/components/Auth/Login.js
 import React, { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from "../firebase/firebaseConfig";
+import app from "../../firebase/firebaseConfig";
 
 const auth = getAuth(app);
 
@@ -41,4 +42,5 @@ const Login = () => {
     </div>
   );
 };
+
 export default Login;
